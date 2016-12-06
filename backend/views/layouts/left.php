@@ -60,6 +60,7 @@
                             ],
                         ],
                     ],
+                    ['label' => 'Dana Infrastruktur', 'icon' => 'fa fa-money', 'url' => ['/dana']],
                 ],
             ]
         ) ?>
