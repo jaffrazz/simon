@@ -14,6 +14,8 @@ class AppAsset extends AssetBundle
     // public $sourcePath = '@backend/web/css/dist/';
     public $css = [
         'css/dist/css/AdminLTE.min.css',
+        'css/bootstrap/css/bootstrap.min.css',
+        'css/plugins/iCheck/square/blue.css',
     ];
     public $js = [
         'css/dist/js/app.min.js'
