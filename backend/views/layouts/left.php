@@ -61,6 +61,10 @@
                         ],
                     ],
                     ['label' => 'Dana Infrastruktur', 'icon' => 'fa fa-money', 'url' => ['/dana']],
+                    ['label' => 'Detail User', 'icon' => 'fa fa-file-text-o', 'url' => ['/detail-user']],
+                    ['label' => 'Laporan Aduan', 'icon' => 'fa fa-comments-o', 'url' => ['/laporan-aduan']],
+                    ['label' => 'Pembangunan', 'icon' => 'fa fa-building-o', 'url' => ['/pembangunan']],
+                    ['label' => 'User', 'icon' => 'fa fa-user', 'url' => ['/user']],
                 ],
             ]
         ) ?>
