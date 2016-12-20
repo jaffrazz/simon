@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\TblDetailUserSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tbl Detail Users';
+$this->title = 'Detail Users';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-detail-user-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Tbl Detail User', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Tambah Detail User', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -30,9 +30,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'tempat_lahir',
             'tgl_lahir',
             'jenis_kelamin',
-            // 'rt',
-            // 'rw',
-            // 'dusun',
+            'rt',
+            'rw',
+            'dusun',
             // 'desa',
             // 'agama',
             // 'status_perkawinan',

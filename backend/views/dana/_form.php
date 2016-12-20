@@ -12,7 +12,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'id_dana_inf')->textInput() ?>
+    <?= $form->field($model, 'id_dana_inf')->hiddenInput(['value'=>date('YmdHis')])->label(false) ?>
 
     <?= $form->field($model, 'nama_dana')->textarea(['rows' => 6]) ?>
 
@@ -20,7 +20,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'rencana_penggunaan')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'id_admin')->textInput() ?>
+    <?= $form->field($model, 'id_admin')->hiddenInput(['value' => Yii::$app->user->id])->label(false) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

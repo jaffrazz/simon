@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model backend\models\TblDanaInfrastruktur */
 
 $this->title = $model->id_dana_inf;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Dana Infrastrukturs', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Dana Infrastrukturs', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-dana-infrastruktur-view">
@@ -35,5 +35,4 @@ $this->params['breadcrumbs'][] = $this->title;
             'id_admin',
         ],
     ]) ?>
-
 </div>

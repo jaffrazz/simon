@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\TblDanaInfrastruktur */
 
-$this->title = 'Update Tbl Dana Infrastruktur: ' . $model->id_dana_inf;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Dana Infrastrukturs', 'url' => ['index']];
+$this->title = 'Update Dana Infrastruktur: ' . $model->id_dana_inf;
+$this->params['breadcrumbs'][] = ['label' => 'Dana Infrastrukturs', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id_dana_inf, 'url' => ['view', 'id' => $model->id_dana_inf]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>

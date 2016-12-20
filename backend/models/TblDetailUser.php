@@ -38,11 +38,12 @@ class TblDetailUser extends \yii\db\ActiveRecord
     {
         return [
             [['nik', 'nama', 'tempat_lahir', 'tgl_lahir', 'jenis_kelamin', 'rt', 'rw', 'dusun', 'desa', 'agama', 'status_perkawinan', 'pekerjaan', 'id_admin'], 'required'],
-            [['nik', 'jenis_kelamin', 'desa', 'agama', 'status_perkawinan', 'pekerjaan', 'id_admin'], 'integer'],
+            [['nik', 'jenis_kelamin', 'id_admin'], 'integer'],
             [['tgl_lahir'], 'safe'],
             [['nama'], 'string', 'max' => 64],
             [['tempat_lahir', 'dusun'], 'string', 'max' => 16],
             [['rt', 'rw'], 'string', 'max' => 4],
+            [['desa', 'agama', 'status_perkawinan', 'pekerjaan'], 'string'],
         ];
     }
 

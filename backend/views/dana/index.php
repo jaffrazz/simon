@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\TblDanaInfrastrukturSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tbl Dana Infrastrukturs';
+$this->title = 'Dana Infrastrukturs';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-dana-infrastruktur-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Tbl Dana Infrastruktur', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Tambah Dana Infrastruktur', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([

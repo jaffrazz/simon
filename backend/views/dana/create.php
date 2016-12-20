@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\TblDanaInfrastruktur */
 
-$this->title = 'Create Tbl Dana Infrastruktur';
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Dana Infrastrukturs', 'url' => ['index']];
+$this->title = 'Tambah Dana Infrastruktur';
+$this->params['breadcrumbs'][] = ['label' => 'Dana Infrastrukturs', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-dana-infrastruktur-create">

@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model backend\models\TblDetailUser */
 
 $this->title = $model->nik;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Detail Users', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Detail Users', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-detail-user-view">

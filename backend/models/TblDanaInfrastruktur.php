@@ -30,8 +30,8 @@ class TblDanaInfrastruktur extends \yii\db\ActiveRecord
     {
         return [
             [['id_dana_inf', 'nama_dana', 'jumlah', 'rencana_penggunaan', 'id_admin'], 'required'],
-            [['id_dana_inf', 'jumlah', 'id_admin'], 'integer'],
-            [['nama_dana', 'rencana_penggunaan'], 'string'],
+            [['jumlah', 'id_admin'], 'integer'],
+            [['id_dana_inf', 'nama_dana', 'rencana_penggunaan'], 'string'],
         ];
     }
 

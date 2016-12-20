@@ -33,6 +33,11 @@ class ComposerStaticInit1967bb58de720575a46028562f862dcb
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'k' => 
+        array (
+            'kartik\\date\\' => 12,
+            'kartik\\base\\' => 12,
+        ),
         'd' => 
         array (
             'dmstr\\' => 6,
@@ -120,6 +125,14 @@ class ComposerStaticInit1967bb58de720575a46028562f862dcb
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+        ),
+        'kartik\\date\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kartik-v/yii2-widget-datepicker',
+        ),
+        'kartik\\base\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kartik-v/yii2-krajee-base',
         ),
         'dmstr\\' => 
         array (

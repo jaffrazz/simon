@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\TblDetailUser */
 
-$this->title = 'Create Tbl Detail User';
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Detail Users', 'url' => ['index']];
+$this->title = 'Tambah Detail User';
+$this->params['breadcrumbs'][] = ['label' => 'Detail Users', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-detail-user-create">
