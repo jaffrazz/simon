@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\TblPembangunanSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tbl Pembangunans';
+$this->title = 'Tbl Pembangunan';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-pembangunan-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Tbl Pembangunan', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Buat Pembangunan', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([

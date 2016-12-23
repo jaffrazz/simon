@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model backend\models\TblLaporanAduan */
 
 $this->title = $model->id_laporan_aduan;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Laporan Aduans', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Laporan Aduan', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-laporan-aduan-view">

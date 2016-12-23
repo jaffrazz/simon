@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model backend\models\TblPembangunan */
 
 $this->title = $model->id_pembangunan;
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Pembangunans', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Tbl Pembangunan', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-pembangunan-view">

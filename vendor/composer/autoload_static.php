@@ -38,8 +38,13 @@ class ComposerStaticInit1967bb58de720575a46028562f862dcb
             'kartik\\date\\' => 12,
             'kartik\\base\\' => 12,
         ),
+        'i' => 
+        array (
+            'ibrarturi\\latlngfinder\\' => 23,
+        ),
         'd' => 
         array (
+            'dosamigos\\datepicker\\' => 21,
             'dmstr\\' => 6,
         ),
         'c' => 
@@ -133,6 +138,14 @@ class ComposerStaticInit1967bb58de720575a46028562f862dcb
         'kartik\\base\\' => 
         array (
             0 => __DIR__ . '/..' . '/kartik-v/yii2-krajee-base',
+        ),
+        'ibrarturi\\latlngfinder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ibrarturi/yii2-latlng-finder',
+        ),
+        'dosamigos\\datepicker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/2amigos/yii2-date-picker-widget/src',
         ),
         'dmstr\\' => 
         array (

@@ -93,4 +93,22 @@ return array (
       '@kartik/date' => $vendorDir . '/kartik-v/yii2-widget-datepicker',
     ),
   ),
+  '2amigos/yii2-date-picker-widget' => 
+  array (
+    'name' => '2amigos/yii2-date-picker-widget',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@dosamigos/datepicker' => $vendorDir . '/2amigos/yii2-date-picker-widget/src',
+    ),
+  ),
+  'ibrarturi/yii2-latlng-finder' => 
+  array (
+    'name' => 'ibrarturi/yii2-latlng-finder',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@ibrarturi/latlngfinder' => $vendorDir . '/ibrarturi/yii2-latlng-finder',
+    ),
+  ),
 );

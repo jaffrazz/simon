@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use kartik\date\DatePicker;
+use dosamigos\datepicker\DatePicker;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\TblDetailUser */
@@ -19,15 +19,15 @@ use kartik\date\DatePicker;
 
     <?= $form->field($model, 'tempat_lahir')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'tgl_lahir')->widget(DatePicker::classname([
-        'language' => Yii::$app->language,
-        'convertFormat' => true,
-        'name' => 'dp_2',
-        'type' => DatePicker::TYPE_INPUT,
-        'pluginOptions' => [
-            'autoclose'=>true,
-            'format' => date('Y-m-d')]
-    ])) ?>
+    <?= $form->field($model, 'tgl_lahir')->widget(
+    DatePicker::className(), [
+        'model' => $model,
+        'attribute' => 'tgl_lahir',
+        'template' => '{addon}{input}',
+        'clientOptions' => [
+            'autoclose' => true,
+            'format' => 'yyyy-mm-dd'
+        ]]) ?>
 
     <?= $form->field($model, 'jenis_kelamin')->dropDownList(
             ['0'=>'Laki - laki','1'=>'Perempuan'],
@@ -57,3 +57,8 @@ use kartik\date\DatePicker;
     <?php ActiveForm::end(); ?>
 
 </div>
+<script type="text/javascript">
+     $('.datepicker').datepicker({
+    format: 'dd/mm/yyyy'
+ });
+</script>

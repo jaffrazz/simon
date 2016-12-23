@@ -4,9 +4,70 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7a3db578044a3de6d0b9a19886bf6f65",
-    "content-hash": "8d59253bddbe9ec169155d3a440d3fc1",
+    "hash": "dd43c030ce13e86d1103764e01495dba",
+    "content-hash": "bc9283b467947f4c99a5ae9b7bca229e",
     "packages": [
+        {
+            "name": "2amigos/yii2-date-picker-widget",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/2amigos/yii2-date-picker-widget.git",
+                "reference": "9d709ef8866652ddb20ccf09ba85cb84e077b1e2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/2amigos/yii2-date-picker-widget/zipball/9d709ef8866652ddb20ccf09ba85cb84e077b1e2",
+                "reference": "9d709ef8866652ddb20ccf09ba85cb84e077b1e2",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/bootstrap-datepicker": "1.4.0",
+                "yiisoft/yii2": ">=2.0.9",
+                "yiisoft/yii2-bootstrap": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "asset-installer-paths": {
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "dosamigos\\datepicker\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "2amigOS! Consulting Group",
+                    "email": "hola@2amigos.us",
+                    "homepage": "http://2amigos.us",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Bootstrap DatePicker widget for Yii2.",
+            "homepage": "http://yiiwheels.com/extension/bootstrap-datepicker",
+            "keywords": [
+                "2amigos",
+                "datepicker",
+                "extension",
+                "widget",
+                "yii",
+                "yii 2",
+                "yii2"
+            ],
+            "time": "2016-12-13 19:55:42"
+        },
         {
             "name": "almasaeed2010/adminlte",
             "version": "v2.3.8",
@@ -94,6 +155,37 @@
                 "mobile-first",
                 "responsive",
                 "web"
+            ]
+        },
+        {
+            "name": "bower-asset/bootstrap-datepicker",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/uxsolutions/bootstrap-datepicker.git",
+                "reference": "e7ca6bb94dc483817f2ff10fc2b723b2b935e016"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/uxsolutions/bootstrap-datepicker/zipball/e7ca6bb94dc483817f2ff10fc2b723b2b935e016",
+                "reference": "e7ca6bb94dc483817f2ff10fc2b723b2b935e016",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/bootstrap": ">=2.0.4,<4.0",
+                "bower-asset/jquery": ">=1.7.1"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "dist/css/bootstrap-datepicker.css",
+                    "dist/css/bootstrap-datepicker3.css",
+                    "js/bootstrap-datepicker.js"
+                ],
+                "bower-asset-ignore": []
+            },
+            "license": [
+                "Apache-2.0"
             ]
         },
         {
@@ -489,6 +581,52 @@
                 "icon"
             ],
             "time": "2016-10-24 15:52:54"
+        },
+        {
+            "name": "ibrarturi/yii2-latlng-finder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ibrarturi/yii2-latlon-finder.git",
+                "reference": "7c6b0bafdf16d42bbdf294a83eb3df1d5f1ca134"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ibrarturi/yii2-latlon-finder/zipball/7c6b0bafdf16d42bbdf294a83eb3df1d5f1ca134",
+                "reference": "7c6b0bafdf16d42bbdf294a83eb3df1d5f1ca134",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "ibrarturi\\latlngfinder\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ibrar Turi",
+                    "email": "ibrarturi@gmail.com"
+                }
+            ],
+            "description": "Find Latitude and Longitude using google maps",
+            "keywords": [
+                "coordinates",
+                "extension",
+                "finder",
+                "google map",
+                "latitude",
+                "longitude",
+                "picker",
+                "yii2"
+            ],
+            "time": "2015-12-17 10:25:24"
         },
         {
             "name": "kartik-v/yii2-krajee-base",
@@ -3425,7 +3563,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "kartik-v/yii2-widget-datepicker": 20
+        "kartik-v/yii2-widget-datepicker": 20,
+        "ibrarturi/yii2-latlng-finder": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

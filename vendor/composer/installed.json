@@ -3542,5 +3542,149 @@
             "widget",
             "yii2"
         ]
+    },
+    {
+        "name": "bower-asset/bootstrap-datepicker",
+        "version": "v1.4.0",
+        "version_normalized": "1.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/uxsolutions/bootstrap-datepicker.git",
+            "reference": "e7ca6bb94dc483817f2ff10fc2b723b2b935e016"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/uxsolutions/bootstrap-datepicker/zipball/e7ca6bb94dc483817f2ff10fc2b723b2b935e016",
+            "reference": "e7ca6bb94dc483817f2ff10fc2b723b2b935e016",
+            "shasum": ""
+        },
+        "require": {
+            "bower-asset/bootstrap": ">=2.0.4,<4.0",
+            "bower-asset/jquery": ">=1.7.1"
+        },
+        "type": "bower-asset-library",
+        "extra": {
+            "bower-asset-main": [
+                "dist/css/bootstrap-datepicker.css",
+                "dist/css/bootstrap-datepicker3.css",
+                "js/bootstrap-datepicker.js"
+            ],
+            "bower-asset-ignore": []
+        },
+        "installation-source": "dist",
+        "license": [
+            "Apache-2.0"
+        ]
+    },
+    {
+        "name": "2amigos/yii2-date-picker-widget",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/2amigos/yii2-date-picker-widget.git",
+            "reference": "9d709ef8866652ddb20ccf09ba85cb84e077b1e2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/2amigos/yii2-date-picker-widget/zipball/9d709ef8866652ddb20ccf09ba85cb84e077b1e2",
+            "reference": "9d709ef8866652ddb20ccf09ba85cb84e077b1e2",
+            "shasum": ""
+        },
+        "require": {
+            "bower-asset/bootstrap-datepicker": "1.4.0",
+            "yiisoft/yii2": ">=2.0.9",
+            "yiisoft/yii2-bootstrap": "*"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.*"
+        },
+        "time": "2016-12-13 19:55:42",
+        "type": "yii2-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            },
+            "asset-installer-paths": {
+                "bower-asset-library": "vendor/bower"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "dosamigos\\datepicker\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "2amigOS! Consulting Group",
+                "email": "hola@2amigos.us",
+                "homepage": "http://2amigos.us",
+                "role": "Developer"
+            }
+        ],
+        "description": "Bootstrap DatePicker widget for Yii2.",
+        "homepage": "http://yiiwheels.com/extension/bootstrap-datepicker",
+        "keywords": [
+            "2amigos",
+            "datepicker",
+            "extension",
+            "widget",
+            "yii",
+            "yii 2",
+            "yii2"
+        ]
+    },
+    {
+        "name": "ibrarturi/yii2-latlng-finder",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ibrarturi/yii2-latlon-finder.git",
+            "reference": "7c6b0bafdf16d42bbdf294a83eb3df1d5f1ca134"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ibrarturi/yii2-latlon-finder/zipball/7c6b0bafdf16d42bbdf294a83eb3df1d5f1ca134",
+            "reference": "7c6b0bafdf16d42bbdf294a83eb3df1d5f1ca134",
+            "shasum": ""
+        },
+        "require": {
+            "yiisoft/yii2": "*"
+        },
+        "time": "2015-12-17 10:25:24",
+        "type": "yii2-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "ibrarturi\\latlngfinder\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Ibrar Turi",
+                "email": "ibrarturi@gmail.com"
+            }
+        ],
+        "description": "Find Latitude and Longitude using google maps",
+        "keywords": [
+            "coordinates",
+            "extension",
+            "finder",
+            "google map",
+            "latitude",
+            "longitude",
+            "picker",
+            "yii2"
+        ]
     }
 ]

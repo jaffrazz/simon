@@ -73,7 +73,12 @@
                             ],
                             ],
                     ['label' => 'Laporan Aduan', 'icon' => 'fa fa-comments-o', 'url' => ['/laporan-aduan']],
-                    ['label' => 'Pembangunan', 'icon' => 'fa fa-building-o', 'url' => ['/pembangunan']],
+                    ['label' => 'Pembangunan', 'icon' => 'fa fa-building-o', 'url' => '#',
+                        'items' => [
+                            ['label' => 'Tabel Detail User', 'icon' => 'fa fa-file-text-o', 'url' => ['/pembangunan'],],
+                            ['label' => 'Buat Detail User', 'icon' => 'fa fa-pencil', 'url' => ['/pembangunan/create'],],
+                            ],
+                            ],
                     ['label' => 'User', 'icon' => 'fa fa-user', 'url' => ['/user']],
                 ],
             ]

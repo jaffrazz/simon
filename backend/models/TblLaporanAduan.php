@@ -30,8 +30,8 @@ class TblLaporanAduan extends \yii\db\ActiveRecord
     {
         return [
             [['id_laporan_aduan', 'nik', 'id_admin', 'laporan', 'waktu_tgl'], 'required'],
-            [['id_laporan_aduan', 'nik', 'id_admin'], 'integer'],
-            [['laporan'], 'string'],
+            [['id_admin'], 'integer'],
+            [['id_laporan_aduan', 'laporan', 'nik'], 'string'],
             [['waktu_tgl'], 'safe'],
         ];
     }

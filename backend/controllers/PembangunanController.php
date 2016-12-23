@@ -121,4 +121,25 @@ class PembangunanController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+    public function actionLists($id)
+    {
+        $countPosts = tbl_dana_infrastruktur::find()
+        ->where(['id_dana_inf' => $id])
+        ->count();
+        
+        $posts = tbl_dana_infrastruktur::find()
+        ->where(['id_dana_inf' => $id])
+        ->orderBy('id DESC')
+        ->all();
+        
+        if($countPosts>0){
+        foreach($posts as $post){
+        echo "<option value='".$post->id."'>".$post->title."</option>";
+        }
+        }
+        else{
+        echo "<option>-</option>";
+        }
+        
+    }
 }

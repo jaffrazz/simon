@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\TblLaporanAduan */
 
-$this->title = 'Create Tbl Laporan Aduan';
-$this->params['breadcrumbs'][] = ['label' => 'Tbl Laporan Aduans', 'url' => ['index']];
+$this->title = 'Buat Laporan Aduan';
+$this->params['breadcrumbs'][] = ['label' => 'Laporan Aduan', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-laporan-aduan-create">
