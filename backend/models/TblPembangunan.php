@@ -40,7 +40,7 @@ class TblPembangunan extends \yii\db\ActiveRecord
             [['id_pembangunan', 'id_dana_inf', 'anggaran', 'progres', 'id_admin'], 'integer'],
             [['nama_pembanguna', 'foto', 'keterangan'], 'string'],
             [['tgl_mulai', 'tgl_selesai'], 'safe'],
-            [['lat', 'lng'], 'string', 'max' => 16],
+            [['lat', 'lng'], 'string', 'max' => 24],
         ];
     }
 
