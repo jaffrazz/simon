@@ -29,10 +29,9 @@ class TblLaporanAduan extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_laporan_aduan', 'nik', 'id_admin', 'laporan', 'waktu_tgl'], 'required'],
+            [['id_laporan_aduan', 'nik', 'id_admin', 'laporan'], 'required'],
             [['id_admin'], 'integer'],
             [['id_laporan_aduan', 'laporan', 'nik'], 'string'],
-            [['waktu_tgl'], 'safe'],
         ];
     }
 
@@ -46,7 +45,6 @@ class TblLaporanAduan extends \yii\db\ActiveRecord
             'nik' => 'Nik',
             'id_admin' => 'Id Admin',
             'laporan' => 'Laporan',
-            'waktu_tgl' => 'Waktu Tgl',
         ];
     }
 }

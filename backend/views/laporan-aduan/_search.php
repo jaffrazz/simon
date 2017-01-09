@@ -23,8 +23,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'laporan') ?>
 
-    <?= $form->field($model, 'waktu_tgl') ?>
-
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
         <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>

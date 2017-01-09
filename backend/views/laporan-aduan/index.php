@@ -29,7 +29,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'nik',
             'id_admin',
             'laporan:ntext',
-            'waktu_tgl',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

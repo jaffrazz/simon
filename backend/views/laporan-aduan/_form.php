@@ -20,8 +20,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'laporan')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'waktu_tgl')->hiddenInput(['value' => date('Y-m-d H:i:s')])->label(false) ?>
-
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

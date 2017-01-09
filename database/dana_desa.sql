@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 06 Des 2016 pada 07.22
+-- Generation Time: 09 Jan 2017 pada 02.43
 -- Versi Server: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -53,6 +53,13 @@ CREATE TABLE `tbl_dana_infrastruktur` (
   `id_admin` int(16) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `tbl_dana_infrastruktur`
+--
+
+INSERT INTO `tbl_dana_infrastruktur` (`id_dana_inf`, `nama_dana`, `jumlah`, `rencana_penggunaan`, `id_admin`) VALUES
+(2147483647, 'tes dana', 1000000, 'buat tes', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -78,6 +85,20 @@ CREATE TABLE `tbl_detail_user` (
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `tbl_isi_aduan`
+--
+
+CREATE TABLE `tbl_isi_aduan` (
+  `id_isi_aduan` varchar(16) NOT NULL,
+  `id_laporan_aduan` varchar(16) NOT NULL,
+  `isi_laporan` text NOT NULL,
+  `pengirim` tinyint(1) NOT NULL COMMENT '0 = admin, 1 = warga',
+  `waktu` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `tbl_laporan_aduan`
 --
 
@@ -85,8 +106,7 @@ CREATE TABLE `tbl_laporan_aduan` (
   `id_laporan_aduan` int(16) NOT NULL,
   `nik` int(16) NOT NULL,
   `id_admin` int(16) NOT NULL,
-  `laporan` text NOT NULL,
-  `waktu_tgl` datetime NOT NULL
+  `laporan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -109,6 +129,13 @@ CREATE TABLE `tbl_pembangunan` (
   `keterangan` text NOT NULL,
   `id_admin` int(16) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tbl_pembangunan`
+--
+
+INSERT INTO `tbl_pembangunan` (`id_pembangunan`, `id_dana_inf`, `nama_pembanguna`, `foto`, `lat`, `lng`, `anggaran`, `tgl_mulai`, `tgl_selesai`, `progres`, `keterangan`, `id_admin`) VALUES
+(2147483647, 2147483647, 'bikin tes input', 0x6b6164736e663b736c, '-7.9429562659992', '111.499557495117', 900000, '2016-12-20', '2016-12-31', 30, 'sek lekas', 1);
 
 -- --------------------------------------------------------
 
@@ -192,6 +219,12 @@ ALTER TABLE `tbl_laporan_aduan`
 --
 ALTER TABLE `tbl_pembangunan`
   ADD PRIMARY KEY (`id_pembangunan`);
+
+--
+-- Indexes for table `tbl_user`
+--
+ALTER TABLE `tbl_user`
+  ADD PRIMARY KEY (`pin`);
 
 --
 -- Indexes for table `tbl_user_admin`

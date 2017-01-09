@@ -19,7 +19,7 @@ class TblLaporanAduanSearch extends TblLaporanAduan
     {
         return [
             [['id_laporan_aduan', 'nik', 'id_admin'], 'integer'],
-            [['laporan', 'waktu_tgl'], 'safe'],
+            [['laporan'], 'safe'],
         ];
     }
 
@@ -62,7 +62,6 @@ class TblLaporanAduanSearch extends TblLaporanAduan
             'id_laporan_aduan' => $this->id_laporan_aduan,
             'nik' => $this->nik,
             'id_admin' => $this->id_admin,
-            'waktu_tgl' => $this->waktu_tgl,
         ]);
 
         $query->andFilterWhere(['like', 'laporan', $this->laporan]);
