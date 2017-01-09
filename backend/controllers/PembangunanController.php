@@ -7,6 +7,7 @@ use backend\models\TblPembangunan;
 use backend\models\TblPembangunanSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use yii\web\UploadedFile;
 use yii\filters\VerbFilter;
 
 /**
@@ -66,11 +67,38 @@ class PembangunanController extends Controller
         $model = new TblPembangunan();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+            
+            $model->gambar = UploadedFile::getInstance($model,'foto');
+            $imageName = $model->gambar.md5(date('Ymdhis'));
+            $model->gambar->saveAs('images/'.$imageName.'.'.$model->gambar->extension);
+
+            $model->foto = 'images/'.$imageName.'.'.$model->gambar->extension;
+            
+
+            // echo "<pre>"; print_r($model->foto); exit();
+            /*try{
+                if ($model->save()) {
+                    $imageName = $model->file.md5(date('Ymdhis'));
+                    $model->file->saveAs(Yii::getAlias('@backend/web/images/').$imageName.'.'.$model->file->extension);
+                    
+                    Yii::$app->getSession()->setFlash('success','data saved');
+
+                    // $model->save();
+                   
+                }
+            }
+
+            catch(\Exception $e){
+                Yii::$app->getSession()->setFlash('error', 'data gagal');
+                // return $this->render('create', ['model' => $model,]);
+            }*/
+
+
+            
             return $this->redirect(['view', 'id' => $model->id_pembangunan]);
         } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
+            return $this->render('create', ['model' => $model,]);
         }
     }
 

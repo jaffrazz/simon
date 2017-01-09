@@ -14,7 +14,7 @@ use dosamigos\datepicker\DatePicker;
 
 <div class="tbl-pembangunan-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
     <?= $form->field($model, 'id_pembangunan')->hiddenInput(['value' => '4'.date('YmdHis')])->label(false) ?>
 
@@ -24,7 +24,7 @@ use dosamigos\datepicker\DatePicker;
 
     <?= $form->field($model, 'nama_pembanguna')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'foto')->textInput() ?>
+    <?= $form->field($model, 'gambar')->fileInput(['multipart'] = true) ?>
 
     <?= $form->field($model, 'lat') ?>
     <?= $form->field($model, 'lng') ?>
@@ -35,7 +35,7 @@ use dosamigos\datepicker\DatePicker;
         'lngAttribute' => 'lng',        // Longitude attribute
         'zoomAttribute' => 'zoom',      // Zoom text attribute
         'mapCanvasId' => 'map',         // Map Canvas id
-        'mapWidth' => 450,              // Map Canvas width
+        'mapWidth' => 650,              // Map Canvas width
         'mapHeight' => 300,             // Map Canvas mapHeight
         'defaultLat' => -7.941298621458841,        // Default latitude for the map
         'defaultLng' => 111.49140357971191,         // Default Longitude for the map
