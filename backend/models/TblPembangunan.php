@@ -37,12 +37,12 @@ class TblPembangunan extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_pembangunan', 'id_dana_inf', 'nama_pembanguna', 'lat', 'lng', 'anggaran', 'tgl_mulai', 'tgl_selesai', 'progres', 'keterangan', 'id_admin'], 'required'],
+            [['id_pembangunan', 'id_dana_inf', 'nama_pembanguna', 'lat', 'lng', 'foto', 'anggaran', 'tgl_mulai', 'tgl_selesai', 'progres', 'keterangan', 'id_admin'], 'required'],
             [['id_pembangunan', 'id_dana_inf', 'anggaran', 'progres', 'id_admin'], 'integer'],
-            [['nama_pembanguna', 'foto', 'keterangan'], 'string'],
+            [['nama_pembanguna', 'keterangan'], 'string'],
             [['tgl_mulai', 'tgl_selesai'], 'safe'],
             [['lat', 'lng'], 'string', 'max' => 24],
-            [['gambar'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg'],
+            [['foto'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg, jpeg'],
         ];
     }
 
@@ -55,7 +55,7 @@ class TblPembangunan extends \yii\db\ActiveRecord
             'id_pembangunan' => 'Id Pembangunan',
             'id_dana_inf' => 'Id Dana Inf',
             'nama_pembanguna' => 'Nama Pembanguna',
-            'gambar' => 'Foto',
+            'foto' => 'Foto',
             'lat' => 'Lat',
             'lng' => 'Lng',
             'anggaran' => 'Anggaran',

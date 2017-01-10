@@ -66,17 +66,22 @@ class PembangunanController extends Controller
     {
         $model = new TblPembangunan();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
 
             
-            $model->gambar = UploadedFile::getInstance($model,'foto');
-            $imageName = $model->gambar.md5(date('Ymdhis'));
-            $model->gambar->saveAs('images/'.$imageName.'.'.$model->gambar->extension);
-
-            $model->foto = 'images/'.$imageName.'.'.$model->gambar->extension;
+            if($model->foto = UploadedFile::getInstance($model,'foto')){
             
+            $imageName = 'poprog'.md5(date('Ymdhis'));
+            $model->foto->saveAs('images/'.$imageName.'.'.$model->foto->extension);
 
+            $model->foto = 'images/'.$imageName.'.'.$model->foto->extension;
+            // echo "<pre>"; print_r($model->getErrors()); exit();
             // echo "<pre>"; print_r($model->foto); exit();
+            $model->save();
+            echo "<pre>"; print_r($model->getErrors()); exit();
+        }
+        
+            
             /*try{
                 if ($model->save()) {
                     $imageName = $model->file.md5(date('Ymdhis'));
@@ -98,7 +103,9 @@ class PembangunanController extends Controller
             
             return $this->redirect(['view', 'id' => $model->id_pembangunan]);
         } else {
-            return $this->render('create', ['model' => $model,]);
+            return $this->render('create', [
+                'model' => $model,
+            ]);
         }
     }
 
