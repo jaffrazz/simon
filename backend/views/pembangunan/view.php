@@ -31,7 +31,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'id_pembangunan',
             'id_dana_inf',
             'nama_pembanguna:ntext',
-            'foto',
+            [
+                'attribute'=>'foto',
+                'format' => 'raw',
+                'value' => '<img src="'.Yii::$app->homeUrl.$model->foto.'" style="max-width:400px;max-height:350px;"/>'
+            ],
             'lat',
             'lng',
             'anggaran',

@@ -69,16 +69,26 @@ class PembangunanController extends Controller
         if ($model->load(Yii::$app->request->post())) {
 
             
-            if($model->foto = UploadedFile::getInstance($model,'foto')){
+            if($model->gambar = UploadedFile::getInstance($model,'gambar')){
+            
             
             $imageName = 'poprog'.md5(date('Ymdhis'));
-            $model->foto->saveAs('images/'.$imageName.'.'.$model->foto->extension);
 
-            $model->foto = 'images/'.$imageName.'.'.$model->foto->extension;
-            // echo "<pre>"; print_r($model->getErrors()); exit();
-            // echo "<pre>"; print_r($model->foto); exit();
+            $model->foto = 'images/'.$imageName.'.'.$model->gambar->extension;
             $model->save();
-            echo "<pre>"; print_r($model->getErrors()); exit();
+            $model->gambar->saveAs('images/'.$imageName.'.'.$model->gambar->extension);
+            
+            // echo "<pre>"; print_r($model); exit();
+            // echo "<pre>"; print_r($model->foto); exit();
+            // $model->upload(false);
+            // if ($model->save()) {
+                return $this->redirect(['view', 'id' => $model->id_pembangunan]);
+
+            // } else {
+            //  echo "<pre>"; print_r($model->getErrors()); exit();
+            // }
+            // echo "<pre>"; print_r($model); exit();
+
         }
         
             
@@ -101,7 +111,7 @@ class PembangunanController extends Controller
 
 
             
-            return $this->redirect(['view', 'id' => $model->id_pembangunan]);
+            // return $this->redirect(['view', 'id' => $model->id_pembangunan]);
         } else {
             return $this->render('create', [
                 'model' => $model,

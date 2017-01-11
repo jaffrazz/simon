@@ -26,6 +26,7 @@ class TblPembangunan extends \yii\db\ActiveRecord
      * @inheritdoc
      */
     public $gambar;
+
     public static function tableName()
     {
         return 'tbl_pembangunan';
@@ -37,12 +38,12 @@ class TblPembangunan extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_pembangunan', 'id_dana_inf', 'nama_pembanguna', 'lat', 'lng', 'foto', 'anggaran', 'tgl_mulai', 'tgl_selesai', 'progres', 'keterangan', 'id_admin'], 'required'],
+            [['id_pembangunan', 'id_dana_inf', 'nama_pembanguna', 'lat', 'lng', 'anggaran', 'tgl_mulai', 'tgl_selesai', 'progres', 'keterangan', 'id_admin'], 'required'],
             [['id_pembangunan', 'id_dana_inf', 'anggaran', 'progres', 'id_admin'], 'integer'],
-            [['nama_pembanguna', 'keterangan'], 'string'],
+            [['nama_pembanguna', 'foto', 'keterangan'], 'string'],
             [['tgl_mulai', 'tgl_selesai'], 'safe'],
             [['lat', 'lng'], 'string', 'max' => 24],
-            [['foto'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg, jpeg'],
+            [['gambar'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg'],
         ];
     }
 

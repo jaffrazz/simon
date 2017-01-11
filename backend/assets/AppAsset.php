@@ -16,6 +16,7 @@ class AppAsset extends AssetBundle
         'css/dist/css/AdminLTE.min.css',
         'css/bootstrap/css/bootstrap.min.css',
         'css/plugins/iCheck/square/blue.css',
+        'css/site.css',
     ];
     public $js = [
         'css/dist/js/app.min.js'

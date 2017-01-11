@@ -24,7 +24,7 @@ use dosamigos\datepicker\DatePicker;
 
     <?= $form->field($model, 'nama_pembanguna')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'foto')->fileInput() ?>
+    <?= $form->field($model, 'gambar')->fileInput() ?>
 
     <?= $form->field($model, 'lat') ?>
     <?= $form->field($model, 'lng') ?>
