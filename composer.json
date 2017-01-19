@@ -21,7 +21,8 @@
         "dmstr/yii2-adminlte-asset": "2.*",
         "kartik-v/yii2-widget-datepicker": "@dev",
         "2amigos/yii2-date-picker-widget": "~1.0",
-        "ibrarturi/yii2-latlng-finder": "dev-master"
+        "ibrarturi/yii2-latlng-finder": "dev-master",
+        "2amigos/yii2-google-maps-library": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
