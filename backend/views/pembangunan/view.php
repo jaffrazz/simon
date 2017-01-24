@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
 
 <div id="map"></div>
-<div class="col-lg-5 well bs-example bs-example-bg-classes">
+<div class="col-lg-6 well bs-example bs-example-bg-classes">
     <?php $form = ActiveForm::begin([
     'options' => ['enctype' => 'multipart/form-data'],
     'method' => 'get',
@@ -57,7 +57,10 @@ $this->params['breadcrumbs'][] = $this->title;
               </tr>
               <tr>
                   <th>Foto</th>
-                  <td><img src="<?= Yii::$app->homeUrl.$model->foto ?>" style="max-width:300px;max-height:250px;"/></td>
+                  <td>
+                    <img class="img-responsive img-thumbnail" alt="Responsive image" src="<?= Yii::$app->homeUrl.$model->foto ?>" style="max-width:200px;max-height:150px;"/>
+                    <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">Klik Untuk Melihat Gambar Lebih Besar</button>
+                  </td>
               </tr>
               <tr>
                   <th>Anggaran</th>
@@ -89,6 +92,22 @@ $this->params['breadcrumbs'][] = $this->title;
       </div>
   </div>
   <?php ActiveForm::end();?>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!-- <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><?= $model->nama_pembanguna;?></h4>
+      </div> -->
+      <div class="modal-body">
+        <img src="<?= Yii::$app->homeUrl.$model->foto ?>" style="max-width:570px;max-height:400px;"/>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">Close</button>
+      </div> -->
+    </div>
+  </div>
 </div>
 <script>
   function initMap() {
