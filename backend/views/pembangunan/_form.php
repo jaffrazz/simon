@@ -48,8 +48,7 @@ use dosamigos\datepicker\DatePicker;
                     'defaultLat' => $lat,        // Default latitude for the map
                     'defaultLng' => $lng,         // Default Longitude for the map
                     'defaultZoom' => 13,             // Default zoom for the map
-                    'enableZoomField' => true,
-                    'marker' =>true,      // True: for assigning zoom values to the zoom field, False: Do not assign zoom value to the zoom field
+                    'enableZoomField' => true,      // True: for assigning zoom values to the zoom field, False: Do not assign zoom value to the zoom field
                 ]); 
     ?>
 
