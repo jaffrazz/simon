@@ -29,19 +29,29 @@ use dosamigos\datepicker\DatePicker;
     <?= $form->field($model, 'lat') ?>
     <?= $form->field($model, 'lng') ?>
      
-    <?= \ibrarturi\latlngfinder\LatLngFinder::widget([
-        'model' => $model,              // model object
-        'latAttribute' => 'lat',        // Latitude attribute
-        'lngAttribute' => 'lng',        // Longitude attribute
-        'zoomAttribute' => 'zoom',      // Zoom text attribute
-        'mapCanvasId' => 'map',         // Map Canvas id
-        'mapWidth' => 650,              // Map Canvas width
-        'mapHeight' => 300,             // Map Canvas mapHeight
-        'defaultLat' => -7.941298621458841,        // Default latitude for the map
-        'defaultLng' => 111.49140357971191,         // Default Longitude for the map
-        'defaultZoom' => 11,             // Default zoom for the map
-        'enableZoomField' => true,      // True: for assigning zoom values to the zoom field, False: Do not assign zoom value to the zoom field
-    ]); ?>
+    <?php
+        if ($model->lat!= null && $model->lng != null) {
+            $lat = $model->lat;
+            $lng = $model->lng;
+        }else{
+            $lat = -7.8815254;
+            $lng = 111.4164468;
+        }
+        echo    \ibrarturi\latlngfinder\LatLngFinder::widget([
+                    'model' => $model,              // model object
+                    'latAttribute' => 'lat',        // Latitude attribute
+                    'lngAttribute' => 'lng',        // Longitude attribute
+                    'zoomAttribute' => 'zoom',      // Zoom text attribute
+                    'mapCanvasId' => 'map',         // Map Canvas id
+                    'mapWidth' => 650,              // Map Canvas width
+                    'mapHeight' => 300,             // Map Canvas mapHeight
+                    'defaultLat' => $lat,        // Default latitude for the map
+                    'defaultLng' => $lng,         // Default Longitude for the map
+                    'defaultZoom' => 13,             // Default zoom for the map
+                    'enableZoomField' => true,
+                    'marker' =>true,      // True: for assigning zoom values to the zoom field, False: Do not assign zoom value to the zoom field
+                ]); 
+    ?>
 
     <?= $form->field($model, 'anggaran')->textInput() ?>
 
