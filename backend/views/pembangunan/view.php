@@ -34,29 +34,49 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
 
 <div id="map"></div>
-<div class="col-lg-4 well bs-example bs-example-bg-classes">
+<div class="col-lg-5 well bs-example bs-example-bg-classes">
     <?php $form = ActiveForm::begin([
     'options' => ['enctype' => 'multipart/form-data'],
     'method' => 'get',
   ]); ?>
   <div class="panel panel-info">
       <div class="panel-heading">Data <strong><?= $model->nama_pembanguna;?></strong></div>
-      <div class="panel-body col-sm-4" style="font-weight:bold">Id_pembangunan</div>
-      <div class="panel-body col-sm-6"><?= $model->id_pembangunan;?></div>
-      <div class="panel-body col-sm-4" style="font-weight:bold">Id Dana Infrastruktur</div>
-      <div class="panel-body col-sm-6"><?= $model->id_dana_inf;?></div>
-      <div class="panel-body col-sm-4" style="font-weight:bold">Nama Pembangunan</div>
-      <div class="panel-body col-sm-6"><?= $model->nama_pembanguna;?></div>
-      <div class="panel-body col-sm-4" style="font-weight:bold">Foto</div>
-      <div class="panel-body col-sm-6"><img src="<?= Yii::$app->homeUrl.$model->foto ?>" style="max-width:300px;max-height:250px;"/></div>
-      <div class="panel-body col-sm-4" style="font-weight:bold">Anggaran</div>
-      <div class="panel-body col-sm-6"><?= $model->anggaran;?></div>
-      <div class="panel-body col-sm-4" style="font-weight:bold">Tl Mulai / Tgl Selesai</div>
-      <div class="panel-body col-sm-6"><?= $model->tgl_mulai;?> / <?= $model->tgl_selesai;?></div>
-      <div class="panel-body col-sm-4" style="font-weight:bold">Progres</div>
-      <div class="panel-body col-sm-6"><?= $model->progres;?></div>
-      <div class="panel-body col-sm-4" style="font-weight:bold">Keterangan</div>
-      <div class="panel-body col-sm-6"><?= $model->keterangan;?></div>
+      <div class="panel-body">
+          <table class="table table-hover">
+              <tr>
+                  <th>Id Pembangunan</th>
+                  <td><?= $model->id_pembangunan;?></td>
+              </tr>
+              <tr>
+                  <th>Id Dana Infrastruktur</th>
+                  <td><?= $model->id_dana_inf;?></td>
+              </tr>
+              <tr>
+                  <th>Nama Pembangunan</th>
+                  <td><?= $model->nama_pembanguna;?></td>
+              </tr>
+              <tr>
+                  <th>Foto</th>
+                  <td><img src="<?= Yii::$app->homeUrl.$model->foto ?>" style="max-width:300px;max-height:250px;"/></td>
+              </tr>
+              <tr>
+                  <th>Anggaran</th>
+                  <td><?= $model->anggaran;?></td>
+              </tr>
+              <tr>
+                  <th>Tgl Mulai / Tgl Selesai</th>
+                  <td><?= $model->tgl_mulai;?> / <?= $model->tgl_selesai;?></td>
+              </tr>
+              <tr>
+                  <th>Progres</th>
+                  <td><?= $model->progres;?></td>
+              </tr>
+              <tr>
+                  <th>Keterangan</th>
+                  <td><?= $model->keterangan;?></td>
+              </tr>
+          </table>
+      </div>
       <div class="panel-body col-sm-6">
         <?= Html::a('Update', ['update', 'id' => $model->id_pembangunan], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id_pembangunan], [
