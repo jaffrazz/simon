@@ -52,6 +52,7 @@ class SignupForm extends Model
         $user->email = $this->email;
         $user->setPassword($this->password);
         $user->generateAuthKey();
+        $user->user_level = 'admin';
         
         return $user->save() ? $user : null;
     }

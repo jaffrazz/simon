@@ -67,4 +67,9 @@ class TblPembangunan extends \yii\db\ActiveRecord
             'id_admin' => 'Id Admin',
         ];
     }
+
+    public function getDanaPembangunan()
+    {
+        return $this->hasOne(TblDanaInfrastruktur::className(),['id_dana_inf' => 'id_dana_inf']);
+    }
 }
