@@ -14,42 +14,61 @@ $this->params['breadcrumbs'][] = $this->title;
   .waktu {
     font-size: x-small;
     color: #ecf0f5;
-    v-align: right !important;
-}
+    float: right;
+    margin: 0em 1em !important;
+  }
+  .komentar {
+    color: #7f7f7f;
+    float: right;
+    margin: 0 0.5em;
+
+  }
+  .waktu-komen{
+    color: #8c8c8c;
+  }
+  .komentar p {
+    margin: 0;
+  }
+  .col-sm-12 textarea{
+    resize: none;
+    width: 100%;
+    margin: 0.5em 0;
+  }
+  .col-sm-12 button {
+    float: right;
+    margin: 0 0 1em;
+  }
 </style>
-<!-- <div class="tbl-laporan-aduan-index">
-
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a('Tambah Laporan Aduan', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id_laporan_aduan',
-            'nik',
-            'id_admin',
-            'laporan:ntext',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
-</div> -->
 <div class="col-lg-12">
   <div class="col-lg-6">
     <div class="panel panel-default">
       <div class="panel-body">
-        <h4>Laporan Masyarakat</h4>
-        <div class="alert alert-info" role="alert">
+        <h4>Aduan Masyarakat</h4>
+        <div class="col-sm-12">
+          <textarea name="komentar" class="form-control" placeholder="Laporkan"></textarea>
+          <button type="submit" class="btn btn-md btn-info">Kirim <i class="fa fa-paper-plane-o"></i></button>
+        </div>
+        <div class="col-md-12">
+          <div class="alert alert-info" role="alert">
           <strong>John Thor</strong>
           <p>Aku luwe durung sarapan</p>
-          <div class="col-sm-4 waktu"> 19:20 31 Jan 2017</div>
+          <p class="waktu"> 19:20 31 Jan 2017</p>
+        </div>
+        <div class="alert alert-info" role="alert">
+          <strong>Mrong Osh</strong>
+          <p>Aku luwe durung sarapan</p>
+          <p class="waktu"> 19:20 31 Jan 2017</p>
+        </div>
+        <div class="alert alert-info" role="alert">
+          <strong>Uvuvwevwevwe Onyetenyevwe Ugwemubwem Osas</strong>
+          <p>Aku luwe durung sarapan</p>
+          <p class="waktu"> 19:20 31 Jan 2017</p>
+        </div>
+        <div class="alert alert-info" role="alert">
+          <strong>Jholeasuna Lapuslamarekanaujbck Ugwemubwem Osassla</strong>
+          <p>Aku luwe durung sarapan</p>
+          <p class="waktu"> 19:20 31 Jan 2017</p>
+        </div>
         </div>
       </div>
     </div>
@@ -57,7 +76,26 @@ $this->params['breadcrumbs'][] = $this->title;
   <div class="col-lg-6">
     <div class="panel panel-default">
       <div class="panel-body">
-        <div class="alert alert-warning" role="alert"> <h4>Changing the icon font location</h4> <p>Bootstrap assumes icon font files will be located in the <code>../fonts/</code> directory, relative to the compiled CSS files. Moving or renaming those font files means updating the CSS in one of three ways:</p> <ul> <li>Change the <code>@icon-font-path</code> and/or <code>@icon-font-name</code> variables in the source Less files.</li> <li>Utilize the <a href="http://lesscss.org/usage/#command-line-usage-relative-urls">relative URLs option</a> provided by the Less compiler.</li> <li>Change the <code>url()</code> paths in the compiled CSS.</li> </ul> <p>Use whatever option best suits your specific development setup.</p> </div>
+        <h4>Laporan</h4>
+        <div class="alert alert-warning" role="alert">
+          <h4><strong>John Thor</strong></h4>
+          <p>Aku luwe durung sarapan</p>
+          <p class="waktu"> 19:20 31 Jan 2017</p>
+          <div class="col-sm-12 komentar">
+            <strong>Uvuvwevwevwe Onyetenyevwe Ugwemubwem Osas</strong>
+            <p>Podo aku yoo luwe</p>
+            <p class="waktu waktu-komen"> 19:20 31 Jan 2017</p>
+          </div>
+          <div class="col-sm-12 komentar">
+            <strong>Mrong Osh</strong>
+            <p>Podo aku yoo luwe</p>
+            <p class="waktu waktu-komen"> 19:20 31 Jan 2017</p>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <textarea name="komentar" class="form-control" placeholder="Komentari"></textarea>
+          <button type="submit" class="btn btn-md btn-info">Komentari <i class="fa fa-paper-plane-o"></i></button>
+        </div>
       </div>
     </div>
   </div>
